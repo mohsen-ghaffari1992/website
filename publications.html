@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohsen Ghaffari - Publications</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,9 +17,10 @@
     <a href="students.html">Students</a>
     <a href="teaching.html">Teaching</a>
     <a href="talks.html">Talks</a>
+    <a href="files/cv.pdf" download>CV</a>
     <!--    <a href="#contact">Contact</a>-->
   </nav>
-  <button id="dark-mode-toggle" aria-label="Toggle dark mode">Dark Mode</button>
+  <button id="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
 </header>
 
 <main>
@@ -55,6 +57,16 @@
   </ul>
 
 </main>
+
+<script>
+  const toggleButton = document.getElementById('dark-mode-toggle');
+  const icon = toggleButton.querySelector('i');
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    icon.className = document.body.classList.contains('dark') ? 'fa fa-sun-o' : 'fa fa-moon-o';
+  });
+</script>
 
 </body>
 </html>
