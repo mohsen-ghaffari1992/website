@@ -7,56 +7,207 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #fefefe;
+      color: #222;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    main {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
-      line-height: 1.6;
-      background-color: #fefefe;
-      color: #222;
     }
-    h1 {
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h1, h2 {
       margin-top: 0;
     }
-    a {
-      color: #004080;
-      text-decoration: none;
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #ccc;
+      margin-top: 4rem;
+      transition: color 0.3s;
     }
-    a:hover {
-      text-decoration: underline;
+
+    body.dark {
+      background-color: #121212;
+      color: #ddd;
     }
-    nav a {
-      margin-right: 1rem;
-      color: #004080;
+    body.dark header {
+      background-color: #1e1e1e;
+      color: #ddd;
+    }
+    body.dark nav a {
+      color: #ddd;
+    }
+    body.dark nav a:hover {
+      color: #ffcc00;
+    }
+    body.dark footer {
+      color: #999;
+      border-top-color: #444;
+    }
+    body.dark .profile img {
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+
+    #dark-mode-toggle {
+      background: none;
+      border: 2px solid white;
+      color: white;
       font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
     }
-    header {
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
+    #dark-mode-toggle:hover {
+      background-color: white;
+      color: #004080;
+    }
+
+    @media(max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile {
+        align-items: center;
+      }
+    }
+
+    .about-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 200px;
+    }
+
+    .profile img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      background-color: #fff;
+    }
+
+    .photo-info {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .photo-info p {
+      font-style: italic;
+      font-size: 0.8rem;
+      margin: 0.3em 0;
+    }
+
+    .bio h1 {
+      margin-top: 0;
+    }
+
+    .bio p {
+      margin: 0.5em 0;
     }
   </style>
 </head>
 <body>
 <header>
-  <h1>Publications</h1>
+  <div><strong>Mohsen Ghaffari</strong></div>
   <nav>
     <a href="index.html">Home</a>
+    <!--    <a href="#projects">Projects</a>-->
+    <a href="publications.html">Publications</a>
     <a href="students.html">Students</a>
     <a href="teaching.html">Teaching</a>
+    <a href="talks.html">Talks</a>
+    <!--    <a href="#contact">Contact</a>-->
   </nav>
+  <button id="dark-mode-toggle" aria-label="Toggle dark mode">Dark Mode</button>
 </header>
 
 <main>
+  <h1>Publications</h1>
+  <h2>Peer Reviewed Conference Proceedings</h2>
   <ul>
-    <li><strong>Paper 1:</strong> Title of Paper One, <em>Journal/Conference, Year</em></li>
-    <li><strong>Paper 2:</strong> Title of Paper Two, <em>Journal/Conference, Year</em></li>
-    <li><strong>Paper 3:</strong> Title of Paper Three, <em>Journal/Conference, Year</em></li>
-    <!-- Add your publications here -->
+    <li><strong>Symbolic State Seeding Improves Coverage of Reinforcement Learning</strong>, <u>Mohsen Ghaffari</u>, Cong Chen, Mahsa Varshosaz, Einar Broch Johnsen, Andrzej Wąsowski, <em>SEAMS</em>, 2025</li>
+
+    <!--    <li><strong>Multi-Agent Reinforcement Learning for Search-and-Rescue with Cooperative Rotation Maneuver</strong>, Danyal Yorulmaz, Tobias Gad Spoorendonk, <u>Mohsen Ghaffari</u>, Mahsa Varshosaz, Andrzej Wąsowski, <em>Under Review</em>, 2024</li>-->
+
+    <li><strong>Symbolic State Partitioning for Reinforcement Learning</strong>, <u>Mohsen Ghaffari</u>, Mahsa Varshosaz, Einar Broch Johnsen, Andrzej Wąsowski, <em>FASE</em>, 2025 <strong>[ETAPS 2025 Distinguished Paper]</strong></li>
+
+    <li><strong>Using Symbolic Execution to Discretize State Spaces for Reinforcement Learning</strong>, <u>Mohsen Ghaffari</u>, Mahsa Varshosaz, Einar Broch Johnsen, Andrzej Wąsowski, <em>34th Nordic Workshop on Programming Theory (NWPT)</em>, 2023</li>
+
+    <li><strong>Formal Specification and Testing for Reinforcement Learning</strong>, Mahsa Varshosaz, <u>Mohsen Ghaffari</u>, Einar Broch Johnsen, Andrzej Wąsowski, <em>Proceedings of the ACM on Programming Languages (ICFP)</em>, 2023</li>
+
+
+    <li><strong>Towards Formal Specification of Reinforcement Learning</strong>, Mahsa Varshosaz, <u>Mohsen Ghaffari</u>, Einar Broch Johnsen, Andrzej Wąsowski, <em>7th Workshop on Learning in Verification (LiVe)</em>, 2023</li>
+
+
   </ul>
+
+  <h2>Journal Articles</h2>
+  <ul>
+    <!--    <li><strong>Minimizing Combined Sewer Overflows with Online Model-Predictive Reinforcement Learning</strong>, Esther Hahyeon Kim, <u>Mohsen Ghaffari</u>, Andreas Holck Høeg-Petersen, Martijn Goorden, Thomas Dyhre Nielsen, Kim Guldstrand Larsen, Andrzej Wąsowski, <em>Urban Water Journal (under review)</em>, 2024</li>-->
+
+    <!--    <li><strong>Graph Transformatio&lt;!&ndash;&ndash;&gt;n for Multi-agent Reinforcement Learning based Patrolling</strong>, Sepideh Bagheri, <u>Mohsen Ghaffari</u>, Mansoor Davoodi, <em>Under Review</em>, 2025</li>-->
+
+    <li><strong>Learning-based systems for assessing hazard places of contagious diseases and diagnosing patient possibility</strong>, Mansoor Davoodi, <u>Mohsen Ghaffari</u>, <em>Expert Systems with Applications</em>, 2023</li>
+
+    <li><strong>Shortest path problem on uncertain networks: An efficient two phases approach</strong>, Mansoor Davoodi, <u>Mohsen Ghaffari</u>, <em>Computers & Industrial Engineering</em>, 2021</li>
+
+    <li><strong>Learning to shift load under uncertain production in the smart grid</strong>, <u>Mohsen Ghaffari</u>, Mohsen Afsharchi, <em>International Transactions on Electrical Energy Systems</em>, 2021</li>
+  </ul>
+
 </main>
 
-<footer>
-  &copy; 2025 Mohsen Ghaffari
-</footer>
 </body>
 </html>

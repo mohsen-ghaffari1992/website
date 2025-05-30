@@ -83,6 +83,14 @@
     body.dark .profile img {
       box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
     }
+    .icon-gray {
+      filter: brightness(0) saturate(0%) opacity(0.85);
+      vertical-align: -4.5px;
+    }
+
+    body.dark .icon-gray {
+      filter: brightness(100%) invert(1) opacity(0.8);
+    }
 
     #dark-mode-toggle {
       background: none;
@@ -171,9 +179,11 @@
     <a href="publications.html">Publications</a>
     <a href="students.html">Students</a>
     <a href="teaching.html">Teaching</a>
+    <a href="talks.html">Talks</a>
 <!--    <a href="#contact">Contact</a>-->
   </nav>
-  <button id="dark-mode-toggle" aria-label="Toggle dark mode">Dark Mode</button>
+<!--  <button id="dark-mode-toggle" aria-label="Toggle dark mode">Dark Mode</button>-->
+  <button id="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
 </header>
 
 <main>
@@ -188,55 +198,89 @@
         </div>
       </div>
       <div class="bio">
-        <p>Mohsen Ghaffari is a postdoctoral researcher in Computer Science at SQUARE group, IT-University of Copenhagen, Denmark. He received a PhD degree in Computer Science from ITU. His research focuses on using formal methods to improve the reliability, safety, and explainability of Reinforcement Learning. He also explores decision-making under uncertainty and the applications of Multi-Agent Reinforcement Learning in real-world problems, particularly in smart grids and route planning.</p>
+        <p>I am a postdoctoral researcher in Computer Science at SQUARE group, IT-University of Copenhagen, Denmark. I received a PhD degree in Computer Science from ITU. My research focuses on using formal methods to improve the reliability, safety, and explainability of Reinforcement Learning. I also explore decision-making under uncertainty and the applications of Multi-Agent Reinforcement Learning in real-world problems, particularly in smart grids and route planning.</p>
+
+        <p>I am <strong>open to work</strong> and seeking for a Postdoctoral role focusing on Reinforcement Learning, Multi-agent Systems, and Decision Making under uncertainty, and would greatly appreciate your support. If you come across any openings or simply wish to connect, feel free to send me an <a href="mailto:mohg@itu.dk">email</a>.</p>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Project 1:</strong> ... </li>
-      <li><strong>Project 2:</strong> ... </li>
-      <li><strong>Project 3:</strong> ... </li>
-    </ul>
-  </section>
+<!--  <section id="projects">-->
+<!--    <h2>Projects</h2>-->
+<!--    <ul>-->
+<!--      <li><strong>Project 1:</strong> ... </li>-->
+<!--      <li><strong>Project 2:</strong> ... </li>-->
+<!--      <li><strong>Project 3:</strong> ... </li>-->
+<!--    </ul>-->
+<!--  </section>-->
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>
-      <a href="mailto:mohg@itu.dk" style="text-decoration: none; color: inherit;">
-        <i class="fa fa-envelope-square" aria-hidden="true"></i> Email
-      </a>
-    </p>
-    <p>
-      <a href="https://www.linkedin.com/in/mohsen-ghaffari-160993111/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-        <i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn
-      </a>
-    </p>
-    <p>
-      <a href="https://orcid.org/0000-0002-1939-9053" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-<!--        <i class="fa-brands fa-orcid" aria-hidden="true"></i> ORCID-->
-        <i class="fab fa-orcid"></i>ORCID
-      </a>
-    </p>
-    <p>
-      <a href="https://scholar.google.com/citations?user=eBkPkngAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-        <i class="fa fa-graduation-cap" aria-hidden="true"></i> Scholar
-      </a>
-    </p>
-  </section>
+<!--  <section id="contact">-->
+<!--    <h2>Contact Me</h2>-->
+<!--    <p>-->
+<!--      <a href="mailto:mohg@itu.dk" style="text-decoration: none; color: inherit;">-->
+<!--        <i class="fa fa-envelope-square" aria-hidden="true"></i> Email-->
+<!--      </a>-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <a href="https://www.linkedin.com/in/mohsen-ghaffari-160993111/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">-->
+<!--        <i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn-->
+<!--      </a>-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <a href="https://orcid.org/0000-0002-1939-9053" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">-->
+<!--&lt;!&ndash;        <i class="fa-brands fa-orcid" aria-hidden="true"></i> ORCID&ndash;&gt;-->
+<!--        <i class="fa fa-orcid" aria-hidden="true"></i> ORCID-->
+<!--      </a>-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <a href="https://github.com/mohsen-ghaffari1992" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">-->
+<!--        <i class="fa fa-github-square" aria-hidden="true"></i> Github-->
+<!--      </a>-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <a href="https://scholar.google.com/citations?user=eBkPkngAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">-->
+<!--        <i class="fa fa-graduation-cap" aria-hidden="true"></i> Scholar-->
+<!--      </a>-->
+<!--    </p>-->
+<!--  </section>-->
+  <p>
+    <a href="mailto:mohg@itu.dk" style="text-decoration: none; color: inherit;">
+      <i class="fa fa-envelope-square" style="font-size:48px;" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/mohsen-ghaffari-160993111/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+      <i class="fa fa-linkedin-square" style="font-size:48px;" aria-hidden="true"></i>
+    </a>
+    <a href="https://orcid.org/0000-0002-1939-9053" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+      <img src="icons/orcid.svg" alt="ORCID" width="48" height="48" class="icon-gray">
+    </a>
+    <a href="https://github.com/mohsen-ghaffari1992" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+      <i class="fa fa-github-square" style="font-size:48px;" aria-hidden="true"></i>
+    </a>
+    <a href="https://scholar.google.com/citations?user=eBkPkngAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+      <i class="fa fa-graduation-cap" style="font-size:48px;" aria-hidden="true"></i>
+    </a>
+    <a href="https://dblp.org/pid/33/5673-2.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+      <img src="icons/dblp.svg" alt="DBLP" width="48" height="48" class="icon-gray">
+    </a>
+  </p>
 </main>
 
+<section id="contact" style="margin-left: 2rem;">
+  <h2>Contact</h2>
+  <p>The best way to reach me is via <a href="mailto:mohg@itu.dk">this email address</a>. <strong>Office IT-University of Copenhagen:</strong> 4F16-4T86, DR-Building, Rued Langgaards Vej 7, DK-2300 Copenhagen S, Denmark</p>
+</section>
+
 <footer>
-  &copy; 2025 Mohsen Ghaffari. All rights reserved.
+  © Copyright 2025 Mohsen Ghaffari. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub</a> Pages. All rights reserved.
 </footer>
 
 <script>
   const toggleButton = document.getElementById('dark-mode-toggle');
+  const icon = toggleButton.querySelector('i');
+
   toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark');
-    toggleButton.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+    icon.className = document.body.classList.contains('dark') ? 'fa fa-sun-o' : 'fa fa-moon-o';
   });
 </script>
 
